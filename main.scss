@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import './sass/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    background: url(./images/mobile/image-header.jpg) no-repeat center;
+    background-size: contain;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 1.5rem 0;
+
+        #nav-menu {
+            display: none;
+        }
+
+        .h-menu {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .hero {
+        padding: 0 1.5rem 78.935%;
+
+        &__title {
+            margin-top: 5.5rem;
+            font: $fw-bolder clamp(2.5rem, 1vw, 4.3125rem)/3.0825rem $ff-fraunces;
+            letter-spacing: 0.3906rem;
+            color: $white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 36px;
+        height: 114px;
+        position: absolute;
+        bottom: 25.35%;
+        left: calc(50% - 36px / 2);
+        background: url(./images/icon-arrow-down.svg);
+    }
+}
+
+main {
+    #about {
+        display: grid;
+    }
+}
