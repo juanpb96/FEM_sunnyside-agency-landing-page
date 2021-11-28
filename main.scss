@@ -556,7 +556,12 @@ footer {
                 text-align: left;
 
                 &__title {
+                    margin-bottom: 2rem;
                     line-height: 3.0825rem;
+                }
+
+                &__info {
+                    margin-bottom: 2.5rem;
                 }
             }
 
