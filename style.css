@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F2F2F2;
 }
@@ -35,6 +39,53 @@ header nav {
 }
 header nav #nav-menu {
   display: none;
+}
+header nav #nav-menu.show-menu {
+  display: block;
+  list-style-type: none;
+  width: 329px;
+  min-height: calc(329px - 24px);
+  position: absolute;
+  top: calc(56px + 26px + 24px);
+  right: 1.5rem;
+  background-color: #fffdfa;
+  z-index: 1;
+}
+header nav #nav-menu.show-menu li {
+  width: fit-content;
+  margin: 0 auto 2rem;
+  font: 600 20px/25px "Barlow", sans-serif;
+  letter-spacing: -0.14px;
+}
+header nav #nav-menu.show-menu li:first-child {
+  margin-top: 2.4375rem;
+}
+header nav #nav-menu.show-menu li:last-child {
+  margin-bottom: 2.4375rem;
+}
+header nav #nav-menu.show-menu li:nth-child(4) a {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #fad400;
+  border-radius: 28px;
+  font: 700 15px/25px "Fraunces", serif;
+  color: #23303e;
+  letter-spacing: -0.11px;
+  text-transform: uppercase;
+}
+header nav #nav-menu.show-menu li a {
+  color: #818498;
+  text-decoration: none;
+}
+header nav #nav-menu.show-menu::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: 0;
+  border-top: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid #fffdfa;
+  border-bottom: 12px solid #fffdfa;
 }
 header nav .h-menu {
   background: transparent;
@@ -67,20 +118,20 @@ main #about {
   grid-template-areas: "transform-img" "transform" "standout-img" "standout";
 }
 main #about .transform {
-  grid-area: "transform";
+  grid-area: transform;
 }
 main #about .transform-img {
   min-height: 312px;
-  grid-area: "transform-img";
+  grid-area: transform-img;
   background: url(./images/mobile/image-transform.jpg) no-repeat center;
   background-size: cover;
 }
 main #about .standout {
-  grid-area: "standout";
+  grid-area: standout;
 }
 main #about .standout-img {
   min-height: 312px;
-  grid-area: "standout-img";
+  grid-area: standout-img;
   background: url("./images/mobile/image-stand-out.jpg") no-repeat center;
   background-size: cover;
 }
@@ -133,13 +184,13 @@ main #services {
   grid-template-areas: "graphic" "photography";
 }
 main #services .graphic {
-  grid-area: "graphic";
+  grid-area: graphic;
   background: url("./images/mobile/image-graphic-design.jpg") no-repeat center;
   background-size: cover;
   color: #25564b;
 }
 main #services .photography {
-  grid-area: "photography";
+  grid-area: photography;
   background: url("./images/mobile/image-photography.jpg") no-repeat center;
   background-size: cover;
   color: #19536b;
@@ -275,6 +326,57 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   display: inline-block;
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    background-image: url(./images/desktop/image-header.jpg);
+  }
+  header .hero {
+    padding-bottom: 55.935%;
+  }
+  header .hero__title {
+    margin-top: 6.5625rem;
+  }
+  header::after {
+    bottom: 39.35%;
+  }
+
+  main #about {
+    grid-template-areas: "transform transform-img" "standout-img standout";
+    grid-template-columns: repeat(2, 50%);
+  }
+  main #services {
+    grid-template-areas: "graphic photography";
+  }
+  main .testimonials {
+    margin: 10rem auto;
+  }
+  main .testimonials__title {
+    margin-bottom: 5.0625rem;
+  }
+  main .testimonials__container {
+    row-gap: 4.3125rem;
+  }
+  main .testimonial__quote {
+    max-width: 21.875rem;
+    margin: 0 auto 2rem;
+  }
+  main #projects .milk, main #projects .orange, main #projects .cone, main #projects .sugar {
+    min-height: 27.9375rem;
+  }
+  main #projects .milk {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  }
+  main #projects .orange {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+  }
+  main #projects .cone {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+  }
+  main #projects .sugar {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F2F2F2;
 }
@@ -35,6 +39,64 @@ header {
 
         #nav-menu {
             display: none;
+
+            &.show-menu {
+                display: block;
+                list-style-type: none;
+                width: 329px;
+                min-height: calc(329px - 24px);
+                position: absolute;
+                top: calc(56px + 26px + 24px);
+                right: 1.5rem;
+                background-color: $light-gray;
+                z-index: 1;
+
+                li {
+                    width: fit-content;
+                    margin: 0 auto 2rem;
+                    font: $fw-normal 20px/25px $ff-barlow;
+                    letter-spacing: -0.14px;
+
+                    &:first-child {
+                        margin-top: 2.4375rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 2.4375rem;
+                    }
+
+                    &:nth-child(4) {
+
+                        a {
+                            display: block;
+                            padding: 1rem 2rem;
+                            background-color: $yellow;
+                            border-radius: 28px;
+                            font: $fw-bold 15px/25px $ff-fraunces;
+                            color: $very-dark-desaturated-blue;
+                            letter-spacing: -0.11px;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    a {
+                        color: $dark-grayish-blue;
+                        text-decoration: none;
+                    }
+
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    border-top: 12px solid transparent;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid $light-gray;
+                    border-bottom: 12px solid $light-gray;
+                }
+            }
         }
 
         .h-menu {
@@ -77,22 +139,22 @@ main {
                              "standout";
 
         .transform {
-            grid-area: "transform";
+            grid-area: transform;
 
             &-img {
                 min-height: 312px;
-                grid-area: "transform-img";
+                grid-area: transform-img;
                 background: url(./images/mobile/image-transform.jpg) no-repeat center;
                 background-size: cover;
             }
         }
 
         .standout {
-            grid-area: "standout";
+            grid-area: standout;
 
             &-img {
                 min-height: 312px;
-                grid-area: "standout-img";
+                grid-area: standout-img;
                 background: url('./images/mobile/image-stand-out.jpg') no-repeat center;
                 background-size: cover;
             }
@@ -160,14 +222,14 @@ main {
                              "photography";
 
         .graphic {
-            grid-area: "graphic";
+            grid-area: graphic;
             background: url('./images/mobile/image-graphic-design.jpg') no-repeat center;
             background-size: cover;
             color: $dark-desaturated-cyan;
         }
 
         .photography {
-            grid-area: "photography";
+            grid-area: photography;
             background: url('./images/mobile/image-photography.jpg') no-repeat center;
             background-size: cover;
             color: $dark-blue;
@@ -331,6 +393,78 @@ footer {
                     width: 100%;
                     height: 100%;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        background-image: url(./images/desktop/image-header.jpg);
+
+        .hero {
+            padding-bottom: 55.935%;
+
+            &__title {
+                margin-top: 6.5625rem;
+            }
+
+        }
+        
+        &::after {
+            bottom: 39.35%;
+        }
+    }
+    
+    main {
+        #about {
+            grid-template-areas: "transform transform-img"
+                                 "standout-img standout";
+            grid-template-columns: repeat(2, 50%);
+        }
+
+        #services {
+            grid-template-areas: "graphic photography";
+        }
+
+        .testimonials {
+            margin: 10rem auto;
+
+            &__title {
+                margin-bottom: 5.0625rem;
+            }
+
+            &__container {
+                row-gap: 4.3125rem;
+            }
+        }
+
+        .testimonial {
+            &__quote {
+                max-width: 21.875rem;
+                margin: 0 auto 2rem;
+            }
+        }
+
+        #projects {
+            .milk, .orange, .cone, .sugar {
+                min-height: 27.9375rem;
+            }
+
+            .milk {
+                background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+            }
+
+            .orange {
+                background-image: url(./images/desktop/image-gallery-orange.jpg);
+            }
+
+            .cone {
+                background-image: url(./images/desktop/image-gallery-cone.jpg);
+            }
+
+            .sugar {
+                background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
             }
         }
     }
