@@ -97,7 +97,7 @@ header .hero {
 }
 header .hero__title {
   margin-top: 5.5rem;
-  font: 900 clamp(2.5rem, 1vw, 4.3125rem)/3.0825rem "Fraunces", serif;
+  font: 900 clamp(2.5rem, 4vw, 3.5rem)/3.0825rem "Fraunces", serif;
   letter-spacing: 0.3906rem;
   color: white;
   text-align: center;
@@ -141,7 +141,7 @@ main #about .about {
 }
 main #about .about__title {
   margin-bottom: 1.5rem;
-  font: 900 clamp(2rem, 1vw, 2.5rem)/2.4663rem "Fraunces", serif;
+  font: 900 clamp(2rem, 4vw, 2.5rem)/2.4663rem "Fraunces", serif;
   letter-spacing: -0.23px;
   color: #23303e;
 }
@@ -226,7 +226,7 @@ main .testimonials__title {
 main .testimonials__container {
   display: grid;
   gap: 4rem 1.875rem;
-  grid-template-columns: repeat(auto-fill, minmax(100%, 21.875rem));
+  grid-template-columns: 1fr;
 }
 main .testimonial img {
   display: inline-block;
@@ -283,7 +283,9 @@ footer .footer-content {
   margin: 0 auto;
   text-align: center;
 }
-footer .footer-content svg {
+footer .footer-content .logo-teal {
+  width: 170px;
+  height: 33px;
   margin-bottom: 2.5rem;
 }
 footer .footer-content .links {
@@ -376,6 +378,131 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   }
   main #projects .sugar {
     background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  header nav {
+    padding: 2.125rem 3rem 0 2.5rem;
+  }
+  header nav .logo {
+    width: 10.625rem;
+  }
+  header nav #nav-menu {
+    display: block;
+  }
+  header nav #nav-menu li {
+    display: inline-block;
+    list-style-type: none;
+  }
+  header nav #nav-menu li:not(:last-child) a {
+    margin-right: 2.9375rem;
+    padding: 1rem 0;
+    background: linear-gradient(white, white) no-repeat 0% 100%;
+    background-size: 0% 2px;
+    transition: background-size 0.2s ease-in-out;
+  }
+  header nav #nav-menu li:not(:last-child) a:hover {
+    background-size: 100% 2px;
+  }
+  header nav #nav-menu li a {
+    color: white;
+    font: 600 1.125rem/1.5625rem "Barlow", sans-serif;
+    letter-spacing: -0.13px;
+    text-decoration: none;
+  }
+  header nav #nav-menu li a[href="#contact"] {
+    display: block;
+    padding: 1rem 2rem;
+    color: #23303e;
+    font: 700 0.9375rem/1.5625rem "Fraunces", serif;
+    letter-spacing: -0.11px;
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 28px;
+    transition: all 0.2s linear;
+  }
+  header nav #nav-menu li a[href="#contact"]:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  header nav .h-menu {
+    display: none;
+  }
+  header .hero {
+    padding-bottom: 37.16%;
+  }
+  header .hero__title {
+    line-height: 4.3125rem;
+  }
+  header::after {
+    bottom: 41.47%;
+  }
+
+  main #about .about {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 18.11% 0;
+    text-align: left;
+  }
+  main #about .about__title {
+    line-height: 3.0825rem;
+  }
+  main #about .learn-more:hover:after {
+    opacity: 1;
+  }
+  main #about .transform {
+    padding-left: 10.3125rem;
+    padding-right: 6.875rem;
+  }
+  main #about .transform-img {
+    background-image: url(./images/desktop/image-transform.jpg);
+  }
+  main #about .standout {
+    padding-left: 6.875rem;
+    padding-right: 10.3125rem;
+  }
+  main #about .standout-img {
+    background-image: url(./images/desktop/image-stand-out.jpg);
+  }
+  main #services .service {
+    margin-top: 55.25%;
+  }
+  main #services .graphic {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+  }
+  main #services .photography {
+    background-image: url(./images/desktop/image-photography.jpg);
+  }
+  main .testimonials__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .testimonial img {
+    margin-bottom: 3.625rem;
+  }
+  main .testimonial__quote {
+    margin-bottom: 4.3125rem;
+  }
+  main #projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer {
+    padding: 4.5rem 0;
+  }
+  footer .footer-content .links a:hover {
+    color: white;
+  }
+  footer .social-media .facebook a:hover {
+    background-image: url(./images/icon-facebook-white.svg);
+  }
+  footer .social-media .instagram a:hover {
+    background-image: url(./images/icon-instagram-white.svg);
+  }
+  footer .social-media .twitter a:hover {
+    background-image: url(./images/icon-twitter-white.svg);
+  }
+  footer .social-media .pinterest a:hover {
+    background-image: url(./images/icon-pinterest-white.svg);
   }
 }
 

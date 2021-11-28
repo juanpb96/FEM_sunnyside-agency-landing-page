@@ -111,7 +111,7 @@ header {
 
         &__title {
             margin-top: 5.5rem;
-            font: $fw-bolder clamp(2.5rem, 1vw, 4.3125rem)/3.0825rem $ff-fraunces;
+            font: $fw-bolder clamp(2.5rem, 4vw, 3.5rem)/3.0825rem $ff-fraunces;
             letter-spacing: 0.3906rem;
             color: $white;
             text-align: center;
@@ -166,7 +166,7 @@ main {
 
             &__title {
                 margin-bottom: 1.5rem;
-                font: $fw-bolder clamp(2rem, 1vw, 2.5rem)/2.4663rem $ff-fraunces;
+                font: $fw-bolder clamp(2rem, 4vw, 2.5rem)/2.4663rem $ff-fraunces;
                 letter-spacing: -0.23px;
                 color: $very-dark-desaturated-blue;
             }
@@ -271,7 +271,7 @@ main {
         &__container {
             display: grid;
             gap: 4rem 1.875rem;
-            grid-template-columns: repeat(auto-fill, minmax(100%, 21.875rem));
+            grid-template-columns: 1fr;
         }
     }
 
@@ -342,7 +342,9 @@ footer {
         margin: 0 auto;
         text-align: center;
 
-        svg {
+        .logo-teal {
+            width: 170px;
+            height: 33px;
             margin-bottom: 2.5rem;
         }
 
@@ -465,6 +467,193 @@ footer {
 
             .sugar {
                 background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    header {
+        nav {
+            padding: 2.125rem 3rem 0 2.5rem;
+
+            .logo {
+                width: 10.625rem;
+            }
+
+            #nav-menu {
+                display: block;
+
+                li {
+                    display: inline-block;
+                    list-style-type: none;
+
+                    &:not(:last-child) {
+
+                        a {
+                            margin-right: 2.9375rem;
+                            padding: 1rem 0;
+                            background: linear-gradient($white, $white) no-repeat 0% 100%;
+                            background-size: 0% 2px;
+                            transition: background-size 0.2s ease-in-out;
+    
+                            &:hover {
+                                background-size: 100% 2px;
+                            }
+                        }
+                    }
+
+                    a {
+                        color: $white;
+                        font: $fw-normal 1.125rem/1.5625rem $ff-barlow;
+                        letter-spacing: -0.13px;
+                        text-decoration: none;
+
+                        &[href="#contact"] {
+                            display: block;
+                            padding: 1rem 2rem;
+                            color: $very-dark-desaturated-blue;
+                            font: $fw-bold 0.9375rem/1.5625rem $ff-fraunces;
+                            letter-spacing: -0.11px;   
+                            text-transform: uppercase;
+                            background-color: $white; 
+                            border-radius: 28px;
+                            transition: all 0.2s linear;
+
+                            &:hover {
+                                color: $white;
+                                background-color: $white-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .h-menu {
+                display: none;
+            }
+        }
+
+        .hero {
+            padding-bottom: 37.16%;
+
+            &__title {
+                line-height: 4.3125rem;
+            }
+        }
+
+        &::after {
+            bottom: 41.47%;
+        }
+    }
+
+    main {
+        #about {
+            .about {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 18.11% 0;
+                text-align: left;
+
+                &__title {
+                    line-height: 3.0825rem;
+                }
+            }
+
+            .learn-more:hover:after {
+                opacity: 1;
+            }
+
+            .transform {
+                padding-left: 10.3125rem;
+                padding-right: 6.875rem;
+
+                &-img {
+                    background-image: url(./images/desktop/image-transform.jpg);
+                }
+            }
+
+            .standout {
+                padding-left: 6.875rem;
+                padding-right: 10.3125rem;
+
+                &-img {
+                    background-image: url(./images/desktop/image-stand-out.jpg);
+                }
+            }
+        }
+
+        #services {
+            .service {
+                margin-top: 55.25%;
+            }
+
+            .graphic {
+                background-image: url(./images/desktop/image-graphic-design.jpg);
+            }
+
+            .photography {
+                background-image: url(./images/desktop/image-photography.jpg);
+            }
+        }
+
+        .testimonials {
+            &__container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial {
+            img {
+                margin-bottom: 3.625rem;
+            }
+
+            &__quote {
+                margin-bottom: 4.3125rem;
+            }
+        }
+
+        #projects {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    footer {
+        padding: 4.5rem 0;
+
+        .footer-content {
+            .links {
+                a {
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            .facebook {
+                a:hover {
+                    background-image: url(./images/icon-facebook-white.svg);
+                }
+            }
+
+            .instagram {
+                a:hover {
+                    background-image: url(./images/icon-instagram-white.svg);
+                }
+            }
+
+            .twitter {
+                a:hover {
+                    background-image: url(./images/icon-twitter-white.svg);
+                }
+            }
+
+            .pinterest {
+                a:hover {
+                    background-image: url(./images/icon-pinterest-white.svg);
+                }
             }
         }
     }
