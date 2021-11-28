@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #FFFCF8;
 }
 
 .sr-only {
@@ -441,7 +441,7 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   main #about .about {
     max-width: 720px;
     margin: 0 auto;
-    padding: 18.11% 0;
+    padding: 21.945% 0;
     text-align: left;
   }
   main #about .about__title {
