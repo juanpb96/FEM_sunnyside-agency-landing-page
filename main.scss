@@ -434,6 +434,9 @@ footer {
 
             &__title {
                 margin-bottom: 5.0625rem;
+                font-size: 1.25rem;
+                line-height: 1.6663rem;
+                letter-spacing: 5px;
             }
 
             &__container {
@@ -558,6 +561,7 @@ footer {
                 &__title {
                     margin-bottom: 2rem;
                     line-height: 3.0825rem;
+                    letter-spacing: 8.75px;
                 }
 
                 &__info {
@@ -603,6 +607,7 @@ footer {
         }
 
         .testimonials {
+            
             &__container {
                 grid-template-columns: repeat(3, 1fr);
             }

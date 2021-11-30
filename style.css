@@ -356,6 +356,9 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   }
   main .testimonials__title {
     margin-bottom: 5.0625rem;
+    font-size: 1.25rem;
+    line-height: 1.6663rem;
+    letter-spacing: 5px;
   }
   main .testimonials__container {
     row-gap: 4.3125rem;
@@ -447,6 +450,7 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   main #about .about__title {
     margin-bottom: 2rem;
     line-height: 3.0825rem;
+    letter-spacing: 8.75px;
   }
   main #about .about__info {
     margin-bottom: 2.5rem;
