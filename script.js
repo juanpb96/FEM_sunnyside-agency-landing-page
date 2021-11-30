@@ -12,5 +12,7 @@ navMenu.addEventListener('click', (e) => {
 });
 
 window.addEventListener('resize', () => {
-    navMenu.classList.remove('show-menu');
+    if(window.innerWidth > 1100) {
+        navMenu.classList.remove('show-menu');
+    }
 });
