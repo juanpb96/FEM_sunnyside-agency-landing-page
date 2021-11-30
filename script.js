@@ -10,3 +10,7 @@ navMenu.addEventListener('click', (e) => {
         navMenu.classList.remove('show-menu');
     }
 });
+
+window.addEventListener('resize', () => {
+    navMenu.classList.remove('show-menu');
+});
