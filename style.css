@@ -449,6 +449,7 @@ footer .footer-content .social-media .facebook a, footer .footer-content .social
   }
   main #about .about__title {
     margin-bottom: 2rem;
+    line-height: 3.0825rem;
   }
   main #about .about__info {
     margin-bottom: 2.5rem;
